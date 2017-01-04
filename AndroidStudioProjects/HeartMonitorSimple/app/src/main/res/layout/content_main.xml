@@ -16,53 +16,103 @@
 
     <LinearLayout
         android:id="@+id/lLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/bConnect"
-            android:text="Connect"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:onClick="scan"
+            android:text="scan"
             android:textAppearance="@style/TextAppearance.AppCompat" />
 
         <Button
-            android:text="Data"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
             android:id="@+id/bData"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:text="Data"
             android:textAppearance="@style/TextAppearance.AppCompat" />
 
         <Button
-            android:text="Save"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
             android:id="@+id/bSave"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:text="Save"
             android:textAppearance="@style/TextAppearance.AppCompat" />
 
         <Button
-            android:text="Start"
+            android:id="@+id/bStart"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:id="@+id/bStart"
             android:layout_weight="1"
+            android:text="Start"
             android:textAppearance="@style/TextAppearance.AppCompat" />
-
-
 
 
     </LinearLayout>
-
     <ListView
         android:id="@+id/lvDevices"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:layout_below="@+id/lLayout"
         android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/lLayoutHR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lvDevices"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tCurrentHR"
+            android:layout_width="match_parent"
+            android:text="hr data"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="60sp"
+            android:textStyle="normal|bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+        <TextView
+            android:id="@+id/tCurrentDate"
+            android:layout_width="match_parent"
+            android:text="hr data"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="HR DATA" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
 </RelativeLayout>
